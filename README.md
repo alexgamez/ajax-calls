@@ -1,11 +1,11 @@
-##Crear Proyecto
+## Crear Proyecto
 
 `rails new ajax-calls --skip-spring --skip-test-unit --no-skip-test-unit --skip-coffee`
 
 
 ``rails g scaffold Book  title --no-controller-specs --no-view-specs --no-controller-test  --no-model-test  --no-system-test``
 
-##New y Create con ajax
+## New y Create con ajax
 
 *app/controllers/books_controller.rb*
 - format.js
@@ -35,6 +35,7 @@ class BooksController < ApplicationController
 	.
 	.
 	.
+
   private
     def set_book
       @book = Book.find(params[:id])
