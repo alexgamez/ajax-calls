@@ -1,0 +1,7 @@
+// En este archivo esta el funcionamiento del la aplicacion despues de presionar el link_to new
+
+// Ocultar link para agregar un nuevo registro
+$("#new_book_link").hide()
+
+// Colocar formulario para nuevo registro
+$("#form_container").append( "<%= j (render 'form', book: @book) %>" )

@@ -1,0 +1,10 @@
+// En este archivo esta el funcionamiento del la aplicacion despues de presionar el submit hacia el metodo create
+
+// Mostrar link para agregar un nuevo registro
+$("#new_book_link").show()
+
+// Quitar formulario para nuevo registro
+$("#form_container").empty();
+
+// Agregar nuevo registros a la pantalla
+$('#books_container').append('<%= j(render 'book', book: @book) %>');

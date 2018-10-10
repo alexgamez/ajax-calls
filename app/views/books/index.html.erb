@@ -2,6 +2,12 @@
 
 <h1>Books</h1>
 
+<%= link_to 'New Book', new_book_path, remote: true , id: "new_book_link"%>
+
+<div id="form_container">
+</div>
+
+
 <table>
   <thead>
     <tr>
@@ -9,17 +15,9 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="books_container">
     <% @books.each do |book| %>
-      <tr>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= render 'book', book: book %>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>
